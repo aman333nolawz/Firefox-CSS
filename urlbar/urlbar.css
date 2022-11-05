@@ -1,0 +1,121 @@
+/* < 71 */
+.urlbar-go-button,
+.search-go-button {
+    list-style-image: url(go.svg) !important;
+}
+
+.search-go-container {
+    display: flex !important;
+}
+
+#searchbar .textbox-input {
+    padding: 0 !important;
+}
+
+/* lock (secure) */
+#identity-box[pageproxystate="valid"]:-moz-any(.verifiedDomain, .verifiedIdentity, .mixedActiveBlocked)
+    > #identity-icon {
+    list-style-image: var(--lock-icon) !important;
+}
+
+/* info (not secure) */
+#identity-box[pageproxystate="valid"]:-moz-any(.mixedDisplayContent, .mixedDisplayContentLoadedActiveBlocked, .unknownIdentity)
+    > #identity-icon {
+    list-style-image: var(--info-icon) !important;
+}
+
+/* warning (dangerous) */
+#identity-box[pageproxystate="valid"]:-moz-any(.notSecure, .weakCipher, .certUserOverridden, .certErrorPage, .insecureLoginForms, .mixedActiveContent)
+    > #identity-icon {
+    list-style-image: var(--warning-icon) !important;
+}
+
+#identity-box.extensionPage {
+    display: none !important;
+}
+
+#urlbar-input,
+#searchbar-input,
+.searchbar-textbox /* < 71 */ {
+    transform: translateY(var(--input-offset)) !important;
+    line-height: 1.745em !important;
+    margin-left: 6px !important;
+}
+
+.search-panel-one-offs-header.search-panel-header {
+    display: none !important;
+}
+
+/* 1x */
+#urlbar {
+    --info-icon: url(info-1x.svg);
+    --lock-icon: url(connection-1x.svg);
+    --warning-icon: url(connection-warning-1x.svg);
+}
+
+.notSecure #identity-icon {
+    fill: var(--yellow) !important;
+}
+
+#tracking-protection-icon-box[hasException=""] #tracking-protection-icon {
+    fill: var(--red) !important;
+}
+#pageActionButton {
+    list-style-image: url(page-action.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+#tracking-protection-icon {
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+#identity-icon {
+    margin-inline-start: 2px !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+.blocked-permission-icon.autoplay-media-icon {
+    list-style-image: url(block-media.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+.blocked-permission-icon.camera-icon {
+    list-style-image: url(camera-off.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+.blocked-permission-icon.microphone-icon {
+    list-style-image: url(mic-off.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+.blocked-permission-icon.desktop-notification-icon {
+    list-style-image: url(notification-off.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+#permissions-granted-icon {
+    list-style-image: url(permissions.svg) !important;
+    fill: var(--lwt-toolbarbutton-icon-fill) !important;
+}
+
+#urlbar,
+#searchbar {
+    --input-offset: -1px;
+}
+
+/* 2x */
+@media (min--moz-device-pixel-ratio: 2) {
+    #urlbar {
+        --info-icon: url(info-2x.svg);
+        --lock-icon: url(connection-2x.svg);
+        --warning-icon: url(connection-warning-2x.svg);
+    }
+
+    #urlbar,
+    #searchbar {
+        --input-offset: -0.5px;
+    }
+
+    #identity-icon-labels {
+        padding-inline-end: 0.5px !important;
+    }
+}

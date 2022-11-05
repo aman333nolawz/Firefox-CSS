@@ -1,0 +1,30 @@
+@import "icons/icons.css";
+@import "icons/extension-icons.css";
+@import "urlbar/urlbar.css";
+
+html#main-window {
+	--focus-outline-color: #8be9fd !important;
+	
+	--button-bgcolor: #414558 !important;
+	--button-primary-bgcolor: #bd93f9 !important;
+	--button-primary-hover-bgcolor: rgba(189, 147, 249, 0.8) !important;
+	--button-primary-active-bgcolor: rgba(189, 147, 249, 0.8) !important;
+	--error-text-color: rgb(255, 121, 198) !important;
+	--input-bgcolor: #414558 !important;
+	--input-border-color: rgb(98, 114, 164) !important;
+	
+	--lwt-accent-color: hsl(231, 15%, 25%) !important;
+	--lwt-text-color: rgb(150, 150, 150) !important;
+	--lwt-selected-tab-background-color: rgb(68, 71, 90) !important;
+	--lwt-toolbarbutton-icon-fill-attention: rgb(189, 147, 249) !important;
+	--lwt-toolbar-field-icon-fill-attention: rgb(189, 147, 249) !important;
+	--lwt-toolbarbutton-icon-fill: #f8f8f8 !important;
+	
+	--toolbar-bgcolor: #282a36 !important;
+	--toolbar-field-background-color: hsl(231, 15%, 27%) !important;
+	--toolbar-field-focus-background-color: hsl(232, 14%, 35%) !important;
+	--toolbar-field-icon-fill-attention: rgb(189, 147, 249) !important;
+	
+	--arrowpanel-background: #282a36 !important;
+	--arrowpanel-border-color: #44475a !important;
+}
